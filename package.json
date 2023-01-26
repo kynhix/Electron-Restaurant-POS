@@ -8,8 +8,5 @@
     "start": "electron ."
   },
   "author": "Kristopher Hicks",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^22.0.3"
-  }
+  "license": "ISC"
 }
