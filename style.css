@@ -1,15 +1,27 @@
+@font-face { font-family: Roboto; font-weight: 0 100; src: url('./fonts/Roboto/Roboto-Thin.ttf'); }
+@font-face { font-family: Roboto; font-style: normal; src: url('./fonts/Roboto/Roboto-Regular.ttf'); }
+@font-face { font-family: Roboto; font-weight: 100 200; src: url('./fonts/Roboto/Roboto-Light.ttf'); }
+@font-face { font-family: Roboto; font-weight: 200 300; src: url('./fonts/Roboto/Roboto-Regular.ttf'); }
+@font-face { font-family: Roboto; font-weight: 400 500; src: url('./fonts/Roboto/Roboto-Bold.ttf'); } 
+@font-face { font-family: Roboto; font-weight: 600 800; src: url('./fonts/Roboto/Roboto-Black.ttf'); } 
+@font-face { font-family: Roboto; font-style: italic; src: url('./fonts/Roboto/Roboto-Italic.ttf'); }
+@font-face { font-family: Roboto; font-style: bold; src: url('./fonts/Roboto/Roboto-Bold.ttf'); }
+@font-face { font-family: Roboto; font-style: bold, italic; src: url('./fonts/Roboto/Roboto-BoldItalic.ttf'); } 
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: black;
+    background-color: #555;
+    font-family: Roboto;
+    font-weight: 401
 }
 
 .ticket-container {
     padding: 1rem;
-    background-color: blue;
+    background-color: #555;
     height: 100%;
 }
 
@@ -18,4 +30,32 @@ body {
     min-height: 8rem;
     margin: 0.5rem;
     background-color: green;
+    box-shadow: 2px 2px 5px black;
+    background: rgb(159,159,159);
+    background: linear-gradient(180deg, rgba(159,159,159,1) 0%, rgba(98,98,98,1) 100%);
+    opacity: 100%;
+}
+
+.ticket p {
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.ticket-title {
+    display: flex;
+}
+
+ul.ticket-title {
+    background: rgb(0,202,255);
+    background: linear-gradient(180deg, rgba(0,202,255,0.23853291316526615) 0%, rgba(0,0,0,0.3561799719887955) 100%);
+}
+
+.ticket-title li {
+    overflow: hidden;
+    display: inline;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 2px;
 }
