@@ -1,30 +1,31 @@
 const ticketPrototype = {
-    initDOM() {
-        const newDiv = document.createElement("div");
-        newDiv.classList.add("ticket");
-        const newContent = document.createTextNode(self.name + self.timestamp);
-
-        newDiv.appendChild(newContent);
-        document.getElementById("ticket-container").appendChild(newDiv);
-    },
+    isEmpty() { return self.items.length == 0; },
 
     update() {
 
     },
 };
 
-function initTicketDOM() {
-    
+function createTicketDOM(ticket) {
+    // The container for the ticket
+    const ticketContainer = document.createElement("div");
+    ticketContainer.classList.add("ticket");
+    const title = document.createTextNode(ticket.name + ticket.timestamp);
+
+    ticketContainer.appendChild(title);
+    document.getElementById("ticket-container").appendChild(ticketContainer);
+
+    return ticketContainer;
 }
 
-function Ticket(name, timestamp, table=[]) {
+function Ticket(name, timestamp, items=[]) {
     self.name = name;
     self.timestamp = timestamp;
-    self.table = table;
-
-    ticketPrototype.initDOM();
+    self.items = items;
+    self.completed = false;
 }
 
 Object.assign(Ticket.prototype, ticketPrototype);
 
-new Ticket("testing", "test");
+const ticket = new Ticket("testing", "test");
+ticket.div = createTicketDOM(ticket);
