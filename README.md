@@ -1,5 +1,5 @@
 # Electron-Restauraunt-POS
-A college project from HACC students.
+This is an open source POS system written with electron. This project can be freely used and modified by others.
 
 # Prerequisites
 ### Install [Node.js](https://nodejs.org/)
