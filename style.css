@@ -19,6 +19,18 @@ body {
     font-weight: 401
 }
 
+.navigation-bar {
+    display: flex;
+    padding: 0.5em;
+    background-color: #333;
+}
+
+.navigation-bar ul li {
+    padding: 0.1em;
+    display: inline;
+    background-color: #555;
+}
+
 .ticket-container {
     padding: 1rem;
     background-color: #555;
@@ -36,6 +48,18 @@ body {
     opacity: 100%;
 }
 
+.ticket-item-mod {
+    padding-left: 1em;
+}
+
+.ticket-item-cooking {
+    color: #a00;
+}
+
+.ticket-item-finished {
+    color: #0c0;
+}
+
 .ticket p {
     font-size: 0.8em;
     font-weight: 500;
@@ -47,15 +71,24 @@ body {
 }
 
 ul.ticket-title {
-    background: rgb(0,202,255);
-    background: linear-gradient(180deg, rgba(0,202,255,0.23853291316526615) 0%, rgba(0,0,0,0.3561799719887955) 100%);
+    background: rgb(0,104,255);
+    background: linear-gradient(180deg, rgba(0,104,255,0.36458333333333337) 45%, rgba(0,202,255,0) 100%);
 }
 
 .ticket-title li {
     overflow: hidden;
-    display: inline;
+    display: flex;
+    justify-content: center;
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 100%;
     padding: 2px;
+}
+
+.ticket-title li:first-child {
+    display: inline;
+}
+
+.ticket-title li:last-child {
+    justify-content: right;
 }
