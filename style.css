@@ -1,3 +1,4 @@
+/* Import fonts, this is probably incorrect, but it will stay for now. */
 @font-face { font-family: Roboto; font-weight: 0 100; src: url('./fonts/Roboto/Roboto-Thin.ttf'); }
 @font-face { font-family: Roboto; font-style: normal; src: url('./fonts/Roboto/Roboto-Regular.ttf'); }
 @font-face { font-family: Roboto; font-weight: 100 200; src: url('./fonts/Roboto/Roboto-Light.ttf'); }
@@ -19,18 +20,40 @@ body {
     font-weight: 401
 }
 
+/* Navigation Bar */
 .navigation-bar {
     display: flex;
-    padding: 0.5em;
     background-color: #333;
 }
 
-.navigation-bar ul li {
-    padding: 0.1em;
-    display: inline;
-    background-color: #555;
+.navigation-bar ul {
+    margin-left: 0;
 }
 
+.navigation-bar ul li {
+    display: inline;
+}
+
+.navigation-bar ul li:last-child {
+    margin: auto;
+    background-color: red;
+}
+
+.navigation-bar a {
+    font-size: 1.25em;
+    padding: 0.25em;
+    border-radius: 0.25em;
+    font-weight: 300;
+    color: #ddd;
+    background-color: #111;
+    text-decoration: none;
+}
+
+.navigation-bar a:hover {
+    background-color: #222;
+}
+
+/* Tickets */
 .ticket-container {
     padding: 1rem;
     background-color: #555;
