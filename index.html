@@ -9,18 +9,27 @@
 </head>
 
 <body>
+  <nav class="navigation-bar">
+    <ul>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#" onclick="showLoginPage()">Login</a></li>
+    </ul>
+  </nav>
   <div class="ticket-container" id="ticket-container">
+    <!-- This is an example layout of what the ticket HTML creator will do -->
     <div class="ticket">
       <ul class="ticket-title">
         <li>Kristopher Hicks</li>
-        <li style = "display: flex; justify-content: center;">112</li>
-        <li><button style="float: right;">Complete Order</button></li>
+        <li>112</li>
+        <li><button>Complete Order</button></li>
       </ul>
-      <p>Food item 1</p>
-      <p>Food item 2</p>
-      <p>Food item 3</p>
+      <div class="ticket-item-finished"><p>Food item 1</p></div>
+      <p class="ticket-item-cooking">Food item 2</p>
+      <p class="ticket-item-mod">Mod item 1</p>
       <p>Food item 4</p>
     </div>
+    <!-- End example -->
   </div>
 
   <script src="renderer.js"></script>

@@ -1,3 +1,4 @@
+/* Import fonts, this is probably incorrect, but it will stay for now. */
 @font-face { font-family: Roboto; font-weight: 0 100; src: url('./fonts/Roboto/Roboto-Thin.ttf'); }
 @font-face { font-family: Roboto; font-style: normal; src: url('./fonts/Roboto/Roboto-Regular.ttf'); }
 @font-face { font-family: Roboto; font-weight: 100 200; src: url('./fonts/Roboto/Roboto-Light.ttf'); }
@@ -19,6 +20,41 @@ body {
     font-weight: 401
 }
 
+/*-----------------
+- Navigation Bar --
+-------------------*/
+.navigation-bar {
+    display: flex;
+    background-color: #333;
+    padding: 0.25em;
+}
+
+.navigation-bar ul {
+}
+
+.navigation-bar ul li {
+    display: inline;
+}
+
+.navigation-bar ul li:last-child {
+    background-color: red;
+}
+
+.navigation-bar a {
+    font-size: 1.25em;
+    padding: 0.25em;
+    border-radius: 0.25em;
+    font-weight: 300;
+    color: #ddd;
+    background-color: #111;
+    text-decoration: none;
+}
+
+.navigation-bar a:hover {
+    background-color: #222;
+}
+
+/* Tickets */
 .ticket-container {
     padding: 1rem;
     background-color: #555;
@@ -36,6 +72,18 @@ body {
     opacity: 100%;
 }
 
+.ticket-item-mod {
+    padding-left: 1em;
+}
+
+.ticket-item-cooking {
+    color: #a00;
+}
+
+.ticket-item-finished {
+    color: #0c0;
+}
+
 .ticket p {
     font-size: 0.8em;
     font-weight: 500;
@@ -47,15 +95,24 @@ body {
 }
 
 ul.ticket-title {
-    background: rgb(0,202,255);
-    background: linear-gradient(180deg, rgba(0,202,255,0.23853291316526615) 0%, rgba(0,0,0,0.3561799719887955) 100%);
+    background: rgb(0,104,255);
+    background: linear-gradient(180deg, rgba(0,104,255,0.36458333333333337) 45%, rgba(0,202,255,0) 100%);
 }
 
 .ticket-title li {
     overflow: hidden;
-    display: inline;
+    display: flex;
+    justify-content: center;
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 100%;
     padding: 2px;
+}
+
+.ticket-title li:first-child {
+    display: inline;
+}
+
+.ticket-title li:last-child {
+    justify-content: right;
 }
