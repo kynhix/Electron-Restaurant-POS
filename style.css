@@ -20,14 +20,16 @@ body {
     font-weight: 401
 }
 
-/* Navigation Bar */
+/*-----------------
+- Navigation Bar --
+-------------------*/
 .navigation-bar {
     display: flex;
     background-color: #333;
+    padding: 0.25em;
 }
 
 .navigation-bar ul {
-    margin-left: 0;
 }
 
 .navigation-bar ul li {
@@ -35,7 +37,6 @@ body {
 }
 
 .navigation-bar ul li:last-child {
-    margin: auto;
     background-color: red;
 }
 

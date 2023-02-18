@@ -16,6 +16,17 @@ const TicketPrototype = {
     addItem: function(item) {
         this.items.concat(item);
     },
+
+    // Returns true if the item was removed
+    removeItem: function(item) {
+        for (let i = 0; i < this.items.length; ++i) {
+            if (this.items[i].id == item.id) {
+                this.items.splice(i, 1);
+                return true;
+            }
+        }
+        return false;
+    }
 };
 
 /**
@@ -41,5 +52,6 @@ Object.setPrototypeOf(createTicketData, ItemPrototype);
 const RestaurantTicketDataPrototype = {
     completed: false,
     name: 'undef',
+    category: 'undef',
 }
 

@@ -9,6 +9,10 @@ const ticketPrototype = {
     },
 };
 
+var showLoginPage = function() {
+    document.getElementById("ticket-container").style.display = "None";
+}
+
 /**
  * 
  * @param {*} ticket 
