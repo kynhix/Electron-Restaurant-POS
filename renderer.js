@@ -9,9 +9,36 @@ const ticketPrototype = {
     },
 };
 
-var showLoginPage = function() {
-    document.getElementById("ticket-container").style.display = "None";
+const navPages = new Map();
+navPages.set("orders", "ticket-container");
+navPages.set("settings", "");
+navPages.set("login", "login-page");
+navPages.set("admin", "");
+
+function navigatePage(event) {
+    hideAllPages();
+
+    const id = navPages.get(event.target.getAttribute("href").substring(1));
+    if (!id) { return; }
+
+    const element = document.getElementById(id);
+    if (!element) { return; }
+
+    element.style.display = null;
 }
+
+function hideAllPages() {
+    navPages.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.style.display = "None";
+        }
+    });
+}
+
+hideAllPages();
+
+Array.from(document.getElementById('nav-bar').getElementsByTagName('a')).forEach(element => element.addEventListener('click', navigatePage, false))
 
 /**
  * 
@@ -57,5 +84,4 @@ function Ticket(name, table, timestamp, items=[]) {
 
 Object.setPrototypeOf(Ticket, ticketPrototype);
 const ticket = new Ticket("testing", "112", "test");
-console.log(ticket);
 ticket.div = createTicketDOM(ticket);

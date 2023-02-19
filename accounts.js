@@ -7,5 +7,5 @@ const AccountPrototype = {
 };
 
 const RestaurantAccountPrototype = {
-    role: 'undef', // The role will determine what you have access to
+    roles: [], // The roles will determine what you have access to
 };

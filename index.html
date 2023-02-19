@@ -9,13 +9,12 @@
 </head>
 
 <body>
-  <nav class="navigation-bar">
-    <ul>
-      <li><a href="#">Settings</a></li>
-      <li><a href="#">Orders</a></li>
-      <li><a href="#" onclick="showLoginPage()">Login</a></li>
-    </ul>
-  </nav>
+  <ul class="navigation-bar" id="nav-bar">
+    <li><a href="#orders">Orders</a></li>
+    <li><a href="#login">Login</a></li>
+    <li><a href="#admin">Admin</a></li>
+    <li><a href="#settings">Settings</a></li>
+  </ul>
   <div class="ticket-container" id="ticket-container">
     <!-- This is an example layout of what the ticket HTML creator will do -->
     <div class="ticket">
@@ -30,6 +29,10 @@
       <p>Food item 4</p>
     </div>
     <!-- End example -->
+  </div>
+
+  <div class="login-page" id="login-page">
+    <h1>Login Page</h1>
   </div>
 
   <script src="renderer.js"></script>

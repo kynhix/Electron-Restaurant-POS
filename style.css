@@ -12,38 +12,38 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #555;
     font-family: Roboto;
-    font-weight: 401
+    font-weight: 401;
+    min-height: 100vh;
 }
 
-/*-----------------
-- Navigation Bar --
--------------------*/
-.navigation-bar {
+/*===================
+=   Navigation Bar  =
+=====================*/
+ul.navigation-bar {
     display: flex;
-    background-color: #333;
-    padding: 0.25em;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
 }
 
-.navigation-bar ul {
+.navigation-bar li {
+    display: block;
 }
 
-.navigation-bar ul li {
-    display: inline;
-}
-
-.navigation-bar ul li:last-child {
-    background-color: red;
+.navigation-bar li:last-child {
+    margin-left: auto;
 }
 
 .navigation-bar a {
-    font-size: 1.25em;
+    display: block;
     padding: 0.25em;
-    border-radius: 0.25em;
+    border-radius: 5px;
+    font-size: 1.25em;
     font-weight: 300;
     color: #ddd;
     background-color: #111;
@@ -54,7 +54,9 @@ body {
     background-color: #222;
 }
 
-/* Tickets */
+/*===========
+=  Tickets  =
+=============*/
 .ticket-container {
     padding: 1rem;
     background-color: #555;
@@ -115,4 +117,24 @@ ul.ticket-title {
 
 .ticket-title li:last-child {
     justify-content: right;
+}
+
+/*==============
+== Login Page ==
+================*/
+
+.login-page {
+    height: 100%;
+    background-color: red;
+}
+
+.login-page h1 {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    color: blue;
+    float: none;
 }
