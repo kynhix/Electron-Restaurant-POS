@@ -13,7 +13,7 @@ const navPages = new Map();
 navPages.set("orders", "ticket-container");
 navPages.set("settings", "");
 navPages.set("login", "login-page");
-navPages.set("admin", "");
+navPages.set("admin", "admin-page");
 
 function navigatePage(event) {
     hideAllPages();

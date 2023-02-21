@@ -9,6 +9,11 @@
 @font-face { font-family: Roboto; font-style: bold; src: url('./fonts/Roboto/Roboto-Bold.ttf'); }
 @font-face { font-family: Roboto; font-style: bold, italic; src: url('./fonts/Roboto/Roboto-BoldItalic.ttf'); } 
 
+
+/*==========
+== Global ==
+==========*/
+
 * {
     margin: 0;
     padding: 0;
@@ -16,10 +21,41 @@
 }
 
 body {
-    background-color: #555;
+    color: #eee;
+    background-color: #556;
     font-family: Roboto;
     font-weight: 401;
     min-height: 100vh;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+input {
+    font-family: Roboto;
+    font-weight: 100;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=submit] {
+    /* box-shadow: inset 1px 1px 1px #fff5; */
+    font-size: large;
+    background-color: #33f;
+    border: solid thin #34f;
+    color: #eee;
+    padding: 0.25em 0 0.25em;
+}
+
+input[type=submit]:hover {
+    color: white;
+    background-color: #44f;
+}
+
+input[type=submit]:active {
+    padding: 0.375em 0 0.125em;
 }
 
 /*===================
@@ -35,23 +71,32 @@ ul.navigation-bar {
     display: block;
 }
 
+.navigation-bar li:not(:first-child):not(:last-child) {
+    margin-left: 3px;
+}
+
 .navigation-bar li:last-child {
     margin-left: auto;
 }
 
 .navigation-bar a {
     display: block;
-    padding: 0.25em;
-    border-radius: 5px;
-    font-size: 1.25em;
+    text-decoration: none;
+    padding: 0.25em 0.5em;
+    border-radius: 3px;
+    font-size: 2em;
     font-weight: 300;
     color: #ddd;
     background-color: #111;
-    text-decoration: none;
 }
 
 .navigation-bar a:hover {
     background-color: #222;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
 }
 
 /*===========
@@ -123,18 +168,59 @@ ul.ticket-title {
 == Login Page ==
 ================*/
 
-.login-page {
-    height: 100%;
-    background-color: red;
+div.login-page {
+    display: block;
+    margin: 0 auto;
+    padding: 0.25em;
+    margin-top: 1em;
+    height: 20em;
+    width: 30em;
+    background-color: #223;
+    box-shadow: 0px 0px 5px black;
 }
 
 .login-page h1 {
-    margin: 0;
-    padding: 0;
+    font-weight: bold;
+    text-align: center;
     display: block;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto;
-    color: blue;
+    color: white;
     float: none;
+    padding-bottom: 0.1em;
+    border-bottom: thin solid #444a;
+    text-shadow: 1px 1px 5px #111;
+}
+
+.login-page form {
+    margin-top: 20px;
+}
+
+.login-page label {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.login-page input[type=text], .login-page input[type=password] {
+    display: block;
+    margin: 0 auto 1em auto;
+    width: 50%;
+}
+
+.login-page input[type=submit] {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+}
+
+/*==============
+== Admin Page ==
+==============*/
+
+.admin-page {
+    background-color: black;
+}
+
+.admin-page h1 {
+    border-bottom: #0c0;
+    color: white;
 }
