@@ -13,7 +13,6 @@
 /*==========
 == Global ==
 ==========*/
-
 * {
     margin: 0;
     padding: 0;
@@ -26,11 +25,15 @@ body {
     font-family: Roboto;
     font-weight: 401;
     min-height: 100vh;
-    height: 100%;
 }
 
 html {
     height: 100%;
+}
+
+label {
+    font-weight: 200;
+    font-size: 1.5em;
 }
 
 input {
@@ -41,7 +44,6 @@ input {
 }
 
 input[type=submit] {
-    /* box-shadow: inset 1px 1px 1px #fff5; */
     font-size: large;
     background-color: #33f;
     border: solid thin #34f;
@@ -58,11 +60,31 @@ input[type=submit]:active {
     padding: 0.375em 0 0.125em;
 }
 
-/*===================
-=   Navigation Bar  =
-=====================*/
+/*============
+== Side Bar ==
+============*/
+.sidebar {
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: black;
+    width: 20em;
+}
+
+/*==================
+== Navigation Bar ==
+==================*/
+.close-menu {
+    display:block;
+    font-size: 3em;
+    margin-left: auto;
+}
+
 ul.navigation-bar {
     display: flex;
+    flex-direction: column;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
 }
@@ -71,19 +93,10 @@ ul.navigation-bar {
     display: block;
 }
 
-.navigation-bar li:not(:first-child):not(:last-child) {
-    margin-left: 3px;
-}
-
-.navigation-bar li:last-child {
-    margin-left: auto;
-}
-
 .navigation-bar a {
     display: block;
     text-decoration: none;
     padding: 0.25em 0.5em;
-    border-radius: 3px;
     font-size: 2em;
     font-weight: 300;
     color: #ddd;
@@ -94,14 +107,9 @@ ul.navigation-bar {
     background-color: #222;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-}
-
 /*===========
-=  Tickets  =
-=============*/
+== Tickets ==
+===========*/
 .ticket-container {
     padding: 1rem;
     background-color: #555;
@@ -166,13 +174,12 @@ ul.ticket-title {
 
 /*==============
 == Login Page ==
-================*/
+==============*/
 
 div.login-page {
     display: block;
     margin: 0 auto;
     padding: 0.25em;
-    margin-top: 1em;
     height: 20em;
     width: 30em;
     background-color: #223;
@@ -202,6 +209,7 @@ div.login-page {
 
 .login-page input[type=text], .login-page input[type=password] {
     display: block;
+    font-size: 1.5em;
     margin: 0 auto 1em auto;
     width: 50%;
 }
