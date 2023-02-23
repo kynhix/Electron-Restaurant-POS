@@ -71,15 +71,26 @@ input[type=submit]:active {
     top: 0;
     background-color: black;
     width: 20em;
+    transform: translate(-20em, 0);
 }
 
 /*==================
 == Navigation Bar ==
 ==================*/
-.close-menu {
+
+.close-menu, .open-menu {
     display:block;
     font-size: 3em;
     margin-left: auto;
+    color: white;
+    text-decoration: none;
+    width:fit-content;
+    margin-top: -0.25em;
+    margin-bottom: -0.1em;
+}
+
+.open-menu {
+    margin-left: 0;
 }
 
 ul.navigation-bar {
@@ -195,6 +206,12 @@ div.login-page {
     padding-bottom: 0.1em;
     border-bottom: thin solid #444a;
     text-shadow: 1px 1px 5px #111;
+}
+
+.login-page h2 {
+    text-align: center;
+    text-shadow: 1px 1px 5px #111;
+    margin: 0.5em 0;
 }
 
 .login-page form {

@@ -3,7 +3,7 @@ The goal of this project is to create a base program for restaurant POS system t
 
 # Prerequisites
 ### Install [Node.js](https://nodejs.org/)
-*Restart might be required.*
+*Note: Restart might be required.*
 # Installation
 **Clone the repository.**
 

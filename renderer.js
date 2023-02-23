@@ -1,14 +1,6 @@
-const ticketPrototype = {
-    isEmpty() { return this.items.length == 0; },
-    
-    isCompleted() {
-        for (let item of this.items) {
-            if (!item.completed) { return false; }
-        }
-        return true;
-    },
-};
-
+/*===========================
+    Navigation
+===========================*/
 const navPages = new Map();
 navPages.set("orders", "ticket-container");
 navPages.set("settings", "");
@@ -36,9 +28,48 @@ function hideAllPages() {
     });
 }
 
-hideAllPages();
+/*===========================
+    Sidebar
+===========================*/
 
-Array.from(document.getElementById('nav-bar').getElementsByTagName('a')).forEach(element => element.addEventListener('click', navigatePage, false))
+function showSidebar() {
+    document.getElementById("sidebar").style.transform = "translate(0, 0)";
+}
+
+function hideSidebar() {
+    document.getElementById("sidebar").style.transform = "translate(-20em, 0)";
+}
+
+
+/*===========================
+    Login
+===========================*/
+function startLogin() {
+    document.getElementById("password").parentElement.style.display = null; 
+    document.getElementById("username").parentElement.style.display = "None";
+}
+
+function submitLogin() {
+    document.getElementById("password").parentElement.style.display = "None"; 
+    document.getElementById("username").parentElement.style.display = null;
+}
+
+Array.from(document.getElementById('nav-bar').getElementsByTagName('a'))
+.forEach(element => element.addEventListener('click', navigatePage, false));
+
+/*===========================
+    Tickets
+===========================*/
+const ticketPrototype = {
+    isEmpty() { return this.items.length == 0; },
+    
+    isCompleted() {
+        for (let item of this.items) {
+            if (!item.completed) { return false; }
+        }
+        return true;
+    },
+};
 
 /**
  * 

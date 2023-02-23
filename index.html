@@ -9,8 +9,11 @@
 </head>
 
 <body>
+  <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+  <a class="open-menu" href="#openmenu" onclick="showSidebar()">&#9776;</a>
   <div class="sidebar" id="sidebar">
-    <a class="close-menu" href="#closemenu">&#9776;</a>
+    <a class="close-menu" href="#closemenu" onclick="hideSidebar()">&#9776;</a>
 
     <ul class="navigation-bar" id="nav-bar">
       <li><a href="#orders">Orders</a></li>
@@ -20,7 +23,7 @@
     </ul>
   </div>
 
-  <div class="ticket-container" id="ticket-container">
+  <div class="ticket-container" id="ticket-container" style="display: None;" >
     <!-- This is an example layout of what the ticket HTML creator will do -->
     <div class="ticket">
       <ul class="ticket-title">
@@ -36,20 +39,25 @@
     <!-- End example -->
   </div>
 
-  <div class="login-page" id="login-page">
+  <div class="login-page" id="login-page" style="display: None;">
     <h1>Login</h1>
-    <form>
-      <label for="username">Username</label>
-      <input type="text" id="username" label="username">
+    <form target="dummyframe" submit="startLogin()">
+      <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" label="username">
+        <input type="submit" value="Login" onclick="startLogin()">
+      </div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" label="password">
-
-      <input type="submit" id="login" value="Login">
+      <div style="display: None;">
+        <h2>Testing</h2>
+        <label for="password">Password</label>
+        <input type="password" id="password" label="password">
+        <input type="submit" value="Login" onclick="submitLogin()">
+      </div>      
     </form>
   </div>
 
-  <div class="admin-page" id="admin-page">
+  <div class="admin-page" id="admin-page" style="display: None;">
     <h1>Admin Page</h1>
   </div>
 
