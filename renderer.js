@@ -1,18 +1,17 @@
 /*===========================
     Navigation
 ===========================*/
-const navPages = new Map();
-navPages.set("orders", "ticket-container");
-navPages.set("settings", "");
-navPages.set("login", "login-page");
-navPages.set("admin", "admin-page");
+const navPages = {
+    orders: "ticket-container",
+    settings: "",
+    login: "login-page",
+    admin: "admin-page",
+}
 
 function navigatePage(event) {
     hideAllPages();
 
-    const id = navPages.get(event.target.getAttribute("href").substring(1));
-    if (!id) { return; }
-
+    const id = navPages[event.target.getAttribute("href").substring(1)];
     const element = document.getElementById(id);
     if (!element) { return; }
 
@@ -20,12 +19,12 @@ function navigatePage(event) {
 }
 
 function hideAllPages() {
-    navPages.forEach(id => {
-        const element = document.getElementById(id);
+    for(const [key, value] of Object.entries(navPages)) {
+        const element = document.getElementById(value);
         if (element) {
             element.style.display = "None";
         }
-    });
+    }
 }
 
 /*===========================

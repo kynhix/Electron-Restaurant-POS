@@ -12,9 +12,9 @@
   <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
 
   <a class="open-menu" href="#openmenu" onclick="showSidebar()">&#9776;</a>
+
   <div class="sidebar" id="sidebar">
     <a class="close-menu" href="#closemenu" onclick="hideSidebar()">&#9776;</a>
-
     <ul class="navigation-bar" id="nav-bar">
       <li><a href="#orders">Orders</a></li>
       <li><a href="#admin">Admin</a></li>
@@ -40,21 +40,23 @@
   </div>
 
   <div class="login-page" id="login-page" style="display: None;">
-    <h1>Login</h1>
-    <form target="dummyframe" submit="startLogin()">
-      <div>
-        <label for="username">Username</label>
-        <input type="text" id="username" label="username">
-        <input type="submit" value="Login" onclick="startLogin()">
-      </div>
+    <div class="login-block">
+      <h1>Login</h1>
+      <form target="dummyframe" submit="startLogin()">
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" label="username">
+          <input type="submit" value="Login" onclick="startLogin()">
+        </div>
 
-      <div style="display: None;">
-        <h2>Testing</h2>
-        <label for="password">Password</label>
-        <input type="password" id="password" label="password">
-        <input type="submit" value="Login" onclick="submitLogin()">
-      </div>      
-    </form>
+        <div style="display: None;">
+          <h2>Testing</h2>
+          <label for="password">Password</label>
+          <input type="password" id="password" label="password">
+          <input type="submit" value="Login" onclick="submitLogin()">
+        </div>      
+      </form>
+    </div>
   </div>
 
   <div class="admin-page" id="admin-page" style="display: None;">

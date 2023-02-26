@@ -1,4 +1,4 @@
-const AccountPrototype = {
+const accountPrototype = {
     name: 'undef',
     timestamp: -1,
     username: 'undef',
@@ -16,7 +16,7 @@ function Account(name, username, password, privileges={}) {
     this.username = username;
     this.password = password;
 }
-Object.setPrototypeOf(Account, AccountPrototype);
+Object.setPrototypeOf(Account, accountPrototype);
 
 
 function createAccount(name, username, password) {
