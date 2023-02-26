@@ -85,7 +85,7 @@ input[type=submit]:active {
     margin-left: auto;
     color: white;
     text-decoration: none;
-    width:fit-content;
+    width: fit-content;
     margin-top: -0.25em;
     margin-bottom: -0.1em;
 }
