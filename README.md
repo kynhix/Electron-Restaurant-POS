@@ -10,6 +10,7 @@ The goal of this project is to create a base program for restaurant POS system t
 **Open a terminal in the folder the repo is in and run**
 ```
 npm install --save-dev electron
+npm install socket.io
 ```
 **Once installed, you can now use the same terminal and run**
 ```
