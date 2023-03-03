@@ -6,7 +6,7 @@ const accountPrototype = {
     privileges: {},
 };
 
-function Account(name, username, password, privileges={}) {
+export function Account(name, username, password, privileges={}) {
     if (!name || !username || !password) {
         throw "Invalid arguments.";
     }
@@ -17,8 +17,3 @@ function Account(name, username, password, privileges={}) {
     this.password = password;
 }
 Object.setPrototypeOf(Account, accountPrototype);
-
-
-function createAccount(name, username, password) {
-    
-}

@@ -1,3 +1,3 @@
+/* Testing functions for accounts.js */
 
-
-console.log(require)
+const { Account } = require('./accounts');

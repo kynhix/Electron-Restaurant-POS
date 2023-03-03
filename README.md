@@ -11,6 +11,7 @@ The goal of this project is to create a base program for restaurant POS system t
 ```
 npm install --save-dev electron
 npm install socket.io
+npm install socket.io-client
 ```
 **Once installed, you can now use the same terminal and run**
 ```
