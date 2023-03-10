@@ -3,15 +3,15 @@ const accountPrototype = {
     timestamp: -1,
     username: 'undef',
     password: 'undef', // Only thing that needs encrypted
-    privileges: {},
+    permissions: {},
 };
 
-export function Account(name, username, password, privileges={}) {
+export function Account(name, username, password, permissions={}) {
     if (!name || !username || !password) {
         throw "Invalid arguments.";
     }
 
-    this.privileges = privileges;
+    this.permissions = permissions;
     this.name = name;
     this.username = username;
     this.password = password;

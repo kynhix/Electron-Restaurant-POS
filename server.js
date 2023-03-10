@@ -6,11 +6,14 @@ const io = new Server({
 
 io.on("connection", (socket) => {
   console.log("made a new connection.");
-
-  socket.on("disconnect", (reason) => {
-    console.log("user disconnected: " + reason);
-  });
+  addHooks(socket);
 });
+
+const addHooks = function(socket) {
+    socket.on("disconnect", (reason) => {
+        console.log("user disconnected: " + reason);
+    });
+}
 
 io.listen(3000);
 

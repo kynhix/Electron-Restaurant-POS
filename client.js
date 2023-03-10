@@ -12,3 +12,11 @@ const socket = manager.socket("/", {
     token: "123"
   }
 });
+
+socket.on("login_success", () => {
+    console.log("Successfully logged in!");
+})
+
+socket.on("login_failure", (reason) => {
+    console.log("Failed to log in!");
+})
